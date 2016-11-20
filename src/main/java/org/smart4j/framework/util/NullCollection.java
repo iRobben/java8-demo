@@ -1,9 +1,12 @@
-package org.smart4j.chapter1.util;
+package org.smart4j.framework.util;
 
 import java.io.Serializable;
 import java.util.AbstractList;
 import java.util.RandomAccess;
 
+/**
+ * @author zhangrh
+ */
 public class NullCollection extends AbstractList<Object>
 implements RandomAccess, Serializable {
 

@@ -1,7 +1,7 @@
-package org.smart4j.chapter1.controller;
+package org.smart4j.chapterDemo.controller;
 
-import org.smart4j.chapter1.model.Customer;
-import org.smart4j.chapter1.service.CustomerService;
+import org.smart4j.chapterDemo.model.Customer;
+import org.smart4j.chapterDemo.service.CustomerService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

@@ -1,5 +1,6 @@
-package org.smart4j.chapter1.helper;
+package org.smart4j.framework.helper;
 
+import org.smart4j.framework.util.PropsUtil;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
@@ -7,7 +8,6 @@ import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.MapListHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.smart4j.chapter1.util.PropsUtil;
 
 import java.sql.Connection;
 import java.sql.SQLException;

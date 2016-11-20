@@ -1,10 +1,10 @@
-package org.smart4j.chapter1.util;
+package org.smart4j.framework.util;
 
 import org.apache.commons.lang3.StringUtils;
 
 /**
  * 字符串工具类
- * @author DELL by 2016/11/19
+ * @author zhangrh by 2016/11/19
  */
 public class StringUtil {
 

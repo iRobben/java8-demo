@@ -1,4 +1,4 @@
-package org.smart4j.chapter1;
+package org.smart4j.chapterDemo;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

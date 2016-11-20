@@ -1,9 +1,10 @@
-package org.smart4j.chapter1.util;
+package org.smart4j.framework.util;
 
 import com.ibatis.common.beans.Probe;
 import com.ibatis.common.beans.ProbeFactory;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -15,7 +16,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * 集合工具类
  *
- * @author DELL by 2016/11/19
+ * @author zhangrh by 2016/11/19
  */
 public class CollectionUtil {
 

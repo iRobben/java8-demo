@@ -1,4 +1,4 @@
-package org.smart4j.chapter1.model;
+package org.smart4j.chapterDemo.model;
 
 /**
  * 客户
