@@ -9,33 +9,33 @@ import java.lang.reflect.Field;
 import java.util.Map;
 
 /**
- * ÒÀÀµ×¢ÈëÖúÊÖÀà
+ * ä¾èµ–æ³¨å…¥åŠ©æ‰‹ç±»
  * @author zhangrh
  * @date 2016/11/21 0021
  */
 public final class IocHelper {
 
     static {
-        //»ñÈ¡ËùÓĞµÄBeanÀàºÍBeanÊµÀıÖ®¼äµÄÓ³Éä¹ØÏµ(¼ò³ÆBean Map)
+        //è·å–æ‰€æœ‰çš„Beanç±»å’ŒBeanå®ä¾‹ä¹‹é—´çš„æ˜ å°„å…³ç³»(ç®€ç§°Bean Map)
         Map<Class<?>,Object> beanMap = BeanHelper.getBeanMap();
         if(MapUtils.isNotEmpty(beanMap)){
-            //±éÀúBean Map
+            //éå†Bean Map
             for(Map.Entry<Class<?>,Object> beanEntry:beanMap.entrySet()){
-                //´ÓBeanMapÖĞ»ñÈ¡BeanÀàÓëBeanÊµÀı
+                //ä»BeanMapä¸­è·å–Beanç±»ä¸Beanå®ä¾‹
                 Class<?> beanClass = beanEntry.getKey();
                 Object beanInstance = beanEntry.getValue();
-                //»ñÈ¡BeanÀà¶¨ÒåµÄËùÓĞ³ÉÔ±±äÁ¿(¼ò³Æ Bean Field)
+                //è·å–Beanç±»å®šä¹‰çš„æ‰€æœ‰æˆå‘˜å˜é‡(ç®€ç§° Bean Field)
                 Field[] beanFields = beanClass.getDeclaredFields();
                 if(ArrayUtils.isNotEmpty(beanFields)){
-                    //±éÀúbeanFields
+                    //éå†beanFields
                     for(Field beanField:beanFields){
-                        //ÅĞ¶Ïµ±Ç°Bean Field ÊÇ·ñ´øÓĞInject×¢½â
+                        //åˆ¤æ–­å½“å‰Bean Field æ˜¯å¦å¸¦æœ‰Injectæ³¨è§£
                         if(beanField.isAnnotationPresent(Inject.class)){
-                            //ÔÚBean Map »ñÈ¡Bean Field¶ÔÓ¦µÄÊµÀı
+                            //åœ¨Bean Map è·å–Bean Fieldå¯¹åº”çš„å®ä¾‹
                             Class<?> beanFieldClass = beanField.getType();
                             Object beanFieldInstance = beanMap.get(beanFieldClass);
                             if(beanFieldInstance != null){
-                                //Í¨¹ı·´Éä³õÊ¼»¯BeanFieldµÄÖµ
+                                //é€šè¿‡åå°„åˆå§‹åŒ–BeanFieldçš„å€¼
                                 ReflectionUtil.setField(beanInstance,beanField,beanFieldInstance);
                             }
                         }
