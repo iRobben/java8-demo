@@ -7,7 +7,7 @@ import org.smart4j.framework.helper.IocHelper;
 import org.smart4j.framework.util.ClassUtil;
 
 /**
- * º”‘ÿœ‡”¶µƒHelper¿‡
+ * Âä†ËΩΩHelperÁ±ª
  * @author zhangrh
  * @date 2016/11/22 0022
  */
@@ -21,7 +21,7 @@ public final class HelperLoader {
               ControllerHelper.class
       } ;
       for (Class<?> cls:classArray){
-          ClassUtil.loadClass(cls.getName(),false);
+          ClassUtil.loadClass(cls.getName(),true);
       }
     }
 }
